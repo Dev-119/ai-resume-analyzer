@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Resume Analyzer</title>
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <div class="navbar">
+    <div class="logo">AI Analyzer</div>
+
+    <div class="nav-links">
+      <span>Job Match</span>
+    </div>
+
+    <div class="auth-buttons">
+      <button onclick="window.location.href='login.html'" class="login">Login</button>
+      <button onclick="window.location.href='signup.html'" class="signup">Sign Up</button>
+    </div>
+  </div>
+
+  <div class="hero">
+
+    <!-- PARTICLES -->
+    <div class="particle" style="top:20%; left:10%"></div>
+    <div class="particle" style="top:40%; left:30%"></div>
+    <div class="particle" style="top:60%; left:20%"></div>
+
+    <div class="hero-left">
+      <h1>Is your resume good enough?</h1>
+      <p>AI-powered system to analyze resumes and match jobs.</p>
+
+      <!-- UPLOAD -->
+      <div class="upload-box">
+        <label class="custom-file-upload" for="resumeInput">
+          Choose Resume
+        </label>
+
+        <input type="file" id="resumeInput" name="resume" accept="application/pdf" hidden>
+
+        <div class="file-name" id="fileName">No file chosen</div>
+
+        <button class="upload-btn" onclick="uploadResume()">Upload Resume</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- RESULTS -->
+  <div id="resultSection" class="result-container hidden">
+
+    <div class="result-card">
+      <h2>Resume Score</h2>
+      <div class="score-circle">
+        <span id="score"></span>
+      </div>
+    </div>
+
+    <div class="result-card">
+      <h3>Skills</h3>
+      <div id="skills" class="tag-container"></div>
+    </div>
+
+    <div class="result-card">
+      <h3>Job Matches</h3>
+      <ul id="jobs"></ul>
+    </div>
+
+    <div class="result-card">
+      <h3>Missing Skills</h3>
+      <div id="missingSkills" class="tag-container missing"></div>
+    </div>
+
+  </div>
+
+  <!-- HISTORY -->
+  <div id="historySection" class="result-wrapper hidden">
+    <h2 id="historyTitle"> Resume History</h2>
+    <div id="historyList"></div>
+  </div>
+
+  <script src="js/api.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>

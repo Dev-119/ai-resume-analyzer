@@ -1,0 +1,18 @@
+# Dependencies
+node_modules/
+venv/
+__pycache__/
+
+# Environment & Secrets
+.env
+
+# OS/IDE files
+.DS_Store
+.vscode/
+
+# ML Models
+*.pkl
+
+# ONLY ignore the actual uploads, not the whole server folder
+# If you don't have an uploads folder yet, you can remove this line
+uploads/

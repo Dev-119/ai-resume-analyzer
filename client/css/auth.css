@@ -1,0 +1,36 @@
+body {
+  background: linear-gradient(135deg, #2b2d42, #5f0f99);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: white;
+  font-family: Arial;
+}
+
+.auth-container {
+  background: rgba(255,255,255,0.1);
+  padding: 30px;
+  border-radius: 15px;
+  backdrop-filter: blur(15px);
+  width: 300px;
+  text-align: center;
+}
+
+.auth-container input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+.auth-container button {
+  width: 100%;
+  padding: 10px;
+  background: #00f5d4;
+  border: none;
+  cursor: pointer;
+}
+
+.auth-container a {
+  color: #00f5d4;
+}
